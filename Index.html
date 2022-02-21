@@ -33,6 +33,31 @@ window.onload = function()
     var y = 0;
 
     var car = new Image();
+context.clearRect(0, 0, 800, 800);
+window.onload = function()
+{
+	x = 0;
+	y = 0;
+
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext("2d");
+
+	var moveInterval = setInterval(function()
+	{
+		draw();
+	}, 30);
+};
+ 
+function draw()
+{
+	context.clearRect(0, 0, 800, 800);
+	var car = new Image();
+	car.src="myimage135BC421-80E4-475D-A8E2-804EC0F012F8.png";
+	context.drawImage(car, x, y);
+
+	y++;
+}
     car.src="135BC421-80E4-475D-A8E2-804EC0F012F8.png";
     context.drawImage(car, x, y);
 }
+clearInterval(moveInterval);
