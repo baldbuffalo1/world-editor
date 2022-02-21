@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+        <title>hello world</title>
+    	<meta charset="UTF-8">
+        <script type="text/javascript" src="main.js"></script>
+        <style type="text/css">
+            #canvas{
+            	border: 2px solid #333;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width"800" height="800">
+        	<!-- fun things happen here -->
+        </canvas>
+    </body>
+</html>
+window.onload = function()
+{
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    	
+    context.fillStyle = "rgb(100, 200, 120)";
+    context.fillRect(10, 10, 55, 50);
+}
+window.onload = function()
+{
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    var x = 0;
+    var y = 0;
+
+    var car = new Image();
+    car.src="myimage.jpg";
+    context.drawImage(car, x, y);
+}
